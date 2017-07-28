@@ -1,0 +1,35 @@
+{% extends 'products_app/base.html' %}
+
+{% block body %}
+{{ block.super }}
+	<div class="container">
+		<div class="row">
+			<h1>All Products:</h1>
+			<h5 class="truncate">Please click on the product that you wish to buy</h5>
+		</div>
+		<div class="row">
+				<table class="bordered highlight">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Price</th>
+							<th>Inventory</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for product in products %}
+						<tr>
+							<td> <a class="hoverable black-text lighten-2" href="/products/{{ product.id }}"> {{ product.name }} </a></td>
+							<td> {{ product.price }} </td>
+							<td> {{ product.inventory }} </td>
+						</tr>
+						{% endfor %}
+					</tbody>
+
+				</table>
+		</div>
+	</div>
+
+{% endblock %}
+
+

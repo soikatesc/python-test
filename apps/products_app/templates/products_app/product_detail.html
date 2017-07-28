@@ -1,0 +1,33 @@
+{% extends 'products_app/base.html' %}
+
+{% block body %}
+{{ block.super }}
+	<div class="container">
+		<h1>Details of this product</h1>
+		<div class="row">
+				<table class="centered bordered">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Price</th>
+							<th>Inventory</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> {{ product.name }} </td>
+							<td> {{ product.price }} </td>
+							<td> {{ product.inventory }} </td>
+							{% if product.inventory > 0 %}
+							<td> <a class="waves-effect waves-light btn" href="/products/{{ product.id }}/purchase">purchase</a></td>
+							{% else %}
+							<td> Out of Stock</td>
+							{% endif %}
+						</tr>
+					</tbody>
+
+				</table>
+		</div>
+	</div>
+{% endblock %}

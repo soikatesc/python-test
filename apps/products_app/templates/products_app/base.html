@@ -1,0 +1,28 @@
+<html>
+	<head>
+		{% load staticfiles %}	
+		<title>Products</title>
+		<!-- local style.css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'products_app/css/style.css'%}">
+		<!-- Compiled and minified CSS -->
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+  		<!-- Compiled and minified JavaScript -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+       
+	</head>
+	<body>
+		{% block body %}
+			<nav>
+			    <div class="nav-wrapper blue-grey darken-2">
+			      <a href="/" class="brand-logo">Cricket Store </a>
+			      <ul id="nav-mobile" class="right hide-on-med-and-down">
+			        <li><a href="/products">Products</a></li>
+			       
+			      </ul>
+			    </div>
+	  		</nav>
+  		{% endblock %}
+
+	</body>
+</html>

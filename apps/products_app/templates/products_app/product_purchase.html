@@ -1,0 +1,54 @@
+{% extends 'products_app/base.html' %}
+
+{% block body %}
+{{ block.super }}
+		<div class="container">
+			<div class="row">
+				<h3>{{ product.name }}</h3>					
+			</div>
+
+			<div class="row">
+				{% if messages%}
+					{% for message in messages%}
+						<p class="error">{{message}}</p>
+					{% endfor%}
+				{% endif %}
+			</div>
+
+			<div class="row">
+				<form action="/products/{{ product.id }}/purchase_post" method="POST">
+					{% csrf_token %}
+					<div class="row">
+						<div class="input-field col s6">
+				          <input id="name" name="byer_name" type="text" class="validate">
+				          <label for="name" class="active">Name</label>
+				        </div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s6">
+				          <input id="email" name="byer_email" type="text" class="validate">
+				          <label for="email" class="active">Email</label>
+				        </div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s6">
+				          <input id="phone" name="byer_phone" type="text" class="validate">
+				          <label for="phone" class="active">Phone</label>
+				        </div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s3">
+							<input type="submit" class="waves-effect waves-light btn" value="Purchase">
+						</div>
+					</div>
+
+
+				</form>
+
+			</div>
+		</div>
+
+{% endblock %}
