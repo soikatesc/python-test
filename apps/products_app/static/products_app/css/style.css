@@ -1,3 +1,67 @@
 #enter-button{
-	margin-top: 20vh;
+	margin-top: 10vh;
+}
+
+#enter-button a{
+	font-size: 35px;
+	font-family: 'Righteous', cursive;
+	color: #FFDC00;
+}
+
+nav{
+	font-weight: bold;
+	font-family: 'Righteous', cursive;
+}
+
+nav .nav-wrapper{
+	background-color: #00C8BE;
+}
+
+nav .nav-wrapper a{
+	color: #FFDC00;
+}
+
+.error{
+	color: red;
+}
+
+.row table a{
+	color: white;
+}
+
+.row table a:hover{
+	color: #00DBEA;
+	font-size: 25px;
+}
+
+#purchase-confirm p{
+	font-size: 17px;
+	font-weight: lighter;
+	color: #FF851B;
+}
+
+#purchase-confirm #p-header{
+	font-size: 20px;
+	font-weight: 300;
+	color: #39CCCC;
+}
+
+#purchase-page h4{
+	font-weight: 300;
+	color: #39CCCC;
+}
+#index-page h1{
+	font-family: 'Abril Fatface', cursive;
+	color: #00DBEA;
+	font-size: 100px;
+}
+
+body{
+	background-color: black;
+	color: white;
+}
+
+.font{
+	font-family: 'Abril Fatface', cursive;
+	color: #00DBEA;
 }

@@ -31,18 +31,22 @@ class PurchaseManager(models.Manager):
 	    return random[0:string_length] # Return the random string.
 
 	def order_creation(self, post, product_id):
-		p = Product.objects.get(id=product_id)
-		p.inventory = p.inventory - 1
-		p.save()
 
-		purchase = Purchase.objects.create(
-			byer_name = post.get('byer_name'),
-			byer_email = post.get('byer_email'),
-			byer_phone = post.get('byer_phone'),
-			product = p,
-			confirmation_code = self.my_random_string(6)
-		)
-		return purchase.id
+		p = Product.objects.get(id=product_id)
+		if p.inventory <= 0:
+			return False
+		else:
+			p.inventory = p.inventory - 1
+			p.save()
+
+			purchase = Purchase.objects.create(
+				byer_name = post.get('byer_name'),
+				byer_email = post.get('byer_email'),
+				byer_phone = post.get('byer_phone'),
+				product = p,
+				confirmation_code = self.my_random_string(6)
+			)
+			return purchase.id
 	# generating random string
 
 

@@ -3,14 +3,24 @@
 {% block body %}
 {{ block.super }}
 
-	<div class="container">
-		<h3>You have successfully completed this purchase!</h3>
-		<hr>
-		<h5>Your confirmation code: {{ purchase.confirmation_code }}</h5>
-		<h5>Your Name: {{ purchase.byer_name }}</h5>
-		<h5>Your Email: {{ purchase.byer_email }}</h5>
-		<h5>Product Name: {{ purchase.product.name }}</h5>
-		<h5>Product Price: ${{ purchase.product.price }}</h5>
+	<div class="container" id="purchase-page">
+		<h4>Congratulation you have successfully completed this purchase:</h4>
+		<div class="row">
+	        <div class="col s12 m6 offset-l3 l6">
+	          <div class="card blue-grey darken-1">
+	            <div class="card-content white-text" id="purchase-confirm">
+	              <span class="card-title">Purchase Details:</span>
+	              <hr>
+	              	<p><span id="p-header">Your confirmation code:</span> {{ purchase.confirmation_code }}</p>
+					<p><span id="p-header">Your purchase id:</span> {{ purchase.id }}</p>
+					<p><span id="p-header">Your Name:</span> {{ purchase.byer_name }}</p>
+					<p><span id="p-header">Your Email:</span> {{ purchase.byer_email }}</p>
+					<p><span id="p-header">Product Name:</span> {{ purchase.product.name }}</p>
+					<p><span id="p-header">Product Price:</span> ${{ purchase.product.price }}</p>
+	            </div>
+	          </div>
+	        </div>
+    	</div>
 	</div>
 
 {% endblock %}
