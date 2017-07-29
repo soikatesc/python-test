@@ -16,11 +16,11 @@ class PurchaseManager(models.Manager):
 
 		if not re.search(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$',post.get('byer_email')):
 			is_valid = False
-			errors.append('Email is Required; Valid Format')
+			errors.append('Enter a valid email, eg: example@example.com')
 
 		if not re.search(r'\d{3}\d{3}\d{4}', post.get('byer_phone')):
 			is_valid = False
-			errors.append('Required, Please enter a valid phone number..')
+			errors.append('Enter a valid mobile number, eg: 1234567890')
 
 		return (is_valid, errors)
 

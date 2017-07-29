@@ -23,15 +23,38 @@ nav .nav-wrapper a{
 
 .error{
 	color: red;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 16px;
+}
+#product-title{
+	font-size: 50px;
 }
 
-.row table a{
+/*desiging tabel*/
+.row table th {
+	border: 1px solid white;
+	color: #01FF8F;
+	font-size: 35px;
+}
+
+.row table td {
+	border: 1px solid white;
+}
+
+.row table a, td, th{
 	color: white;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 25px;
 }
 
 .row table a:hover{
 	color: #00DBEA;
 }
+
+/*.row table td:hover{
+	background-color: #E9E500;
+}*/
+/*tabel design */
 
 #purchase-confirm p{
 	font-size: 17px;
@@ -56,11 +79,40 @@ nav .nav-wrapper a{
 }
 
 body{
-	background-color: black;
-	color: white;
+	background-color: #272822;
+	color: #262626;
 }
 
 .font{
 	font-family: 'Abril Fatface', cursive;
 	color: #00DBEA;
 }
+
+.sub-header{
+	color: #00C9CB;
+	font-family: 'Libre Franklin', sans-serif;
+}
+
+/*form design*/
+.row .input-field label{
+	font-size: 25px;
+	color: black;
+	font-family: 'Abril Fatface', cursive;
+}
+
+.row .input-field input {
+	font-size: 22px;
+}
+
+form {
+	background-color: #FFB872;
+	border-radius: 5%;
+}
+
+#submit{
+	color: black;
+	background-color: #51FECE;
+	font-size: 25px;
+}
+
+
