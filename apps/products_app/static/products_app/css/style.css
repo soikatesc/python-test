@@ -105,8 +105,9 @@ body{
 }
 
 form {
-	background-color: #FFB872;
+	background-color: white;
 	border-radius: 5%;
+	border: 2px solid #51FECE;
 }
 
 #submit{
